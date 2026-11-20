@@ -148,23 +148,6 @@ $$v_{\text{batch}} = \frac{1.2 \times 10^6\text{ km}}{111,600\text{ s}} \approx 
 
 While comfortably below the speed of light ($c = 299,792\text{ km/s}$), unmitigated atmospheric flight at Mach 31.3 introduces severe structural and biological hazards to the embodied agent.
 
-```text
-+-----------------------------------+-----------------------------------+
-|   MODE A: NAIVE SEQUENTIAL        |   MODE B: BATCHING + CNST         |
-+-----------------------------------+-----------------------------------+
-| Stops: 600,000,000 households     | Drops: 10,000 municipal zones     |
-| Dwell: 1.0 s / house              | Dwell: 0.0 s (aerial dispersal)   |
-| Window: 31 hrs (111,600 s)        | Window: 31 hrs + CNST (+3,600 s)  |
-|                                   |                                   |
-| [House 1]--(1s)-->[House 2]--...  | [City A]====(Carpet-Bomb)====>    |
-|                                   |   |-> (CNST Active: age < 11)     |
-|                                   |                                   |
-| Result: 19.02 YEARS required      | Result: Sub-Mach 3 cruise speed   |
-| Failure: Pancake G-load + Mach 3+ | Status: Survivable & On-Schedule  |
-|          ER burn pit-stops        |         (Zero ER stops required)  |
-+-----------------------------------+-----------------------------------+
-```
-
 ### 4.4 Aerodynamic & Thermal Degradation of `AGENT-SANTA`
 
 Operating an unshielded biological/embodied chassis at supersonic and hypersonic velocities produces deterministic physical failure modes:
@@ -183,6 +166,24 @@ To reduce required cruise velocity below the Mach 3.0 thermal-burn threshold wit
 - **Trigger Condition:** On December 24 at 23:59:59 local time, any household containing at least one user with `Belief_Token > 0.1` (age < 11) transitions into the CNST leap hour (24:00:00 to 24:59:59) before advancing to December 25 00:00:00.
 - **Isolation Guarantee:** Households without active child nodes experience standard wall-clock progression.
 - **Operational Impact:** CNST injects $+3,600\text{ seconds}$ of localized execution buffer per time zone, permitting `AGENT-SANTA` to throttle down during municipal dispersal passes, avoid pancake-inducing G-loads, and eliminate ER burn-treatment stops.
+
+
+```text
++-----------------------------------+-----------------------------------+
+|   MODE A: NAIVE SEQUENTIAL        |   MODE B: BATCHING + CNST         |
++-----------------------------------+-----------------------------------+
+| Stops: 600,000,000 households     | Drops: 10,000 municipal zones     |
+| Dwell: 1.0 s / house              | Dwell: 0.0 s (aerial dispersal)   |
+| Window: 31 hrs (111,600 s)        | Window: 31 hrs + CNST (+3,600 s)  |
+|                                   |                                   |
+| [House 1]--(1s)-->[House 2]--...  | [City A]====(Carpet-Bomb)====>    |
+|                                   |   |-> (CNST Active: age < 11)     |
+|                                   |                                   |
+| Result: 19.02 YEARS required      | Result: Sub-Mach 3 cruise speed   |
+| Failure: Pancake G-load + Mach 3+ | Status: Survivable & On-Schedule  |
+|          ER burn pit-stops        |         (Zero ER stops required)  |
++-----------------------------------+-----------------------------------+
+```
 
 ### 5.2 End-to-End Inference-to-Delivery Pipeline
 
