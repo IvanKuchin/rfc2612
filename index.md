@@ -210,7 +210,7 @@ To reduce required cruise velocity below the Mach 3.0 thermal-burn threshold wit
 
 1. **Prompt Injection & Reward Hacking:** Child red-teamers frequently attempt multi-turn persuasion or sibling blame-shifting to corrupt the Alignment Gate. Telemetry from `AGENT-ELF-OBS` MUST be cryptographically signed to prevent local tampering.
 
-2. **Adversarial State Rollbacks (`AGENT-GRINCH`):** `AGENT-GRINCH` instances exploit unguarded ingress ports to roll back delivered state. Orchestrators SHOULD verify post-delivery state hashes and monitor for spontaneous `heart_size *= 3` alignment inversions, upon which adversarial agents MAY be promoted to cooperative co-executors.
+2. **Adversarial State Rollbacks (`AGENT-GRINCH`):** `AGENT-GRINCH` instances use unguarded entry points (such as chimneys) to take back gifts that were already delivered. Orchestrators SHOULD check that each household's state is unchanged after delivery. Orchestrators SHOULD also watch for sudden changes of heart (`heart_size *= 3`). When this happens, the adversarial agent MAY be promoted to a cooperative co-executor.
 
 3. **Residential Telemetry Privacy:** Continuous behavioral monitoring ("sees you when you're sleeping") MUST remain ephemeral within the 364-day evaluation window and MUST be purged upon Cohort Context Eviction at `age >= 11`.
 
