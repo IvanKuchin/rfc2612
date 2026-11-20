@@ -1,12 +1,12 @@
 ﻿---
 layout: rfc
-title: "RFC 2512: Christmas Night Saving Time (CNST)"
+title: "RFC 2612: Christmas Night Saving Time (CNST)"
 ---
 
 <div class="rfc-header-grid">
 <div class="rfc-header-col">
 North Pole Engineering Task Force (NPETF)<br>
-Request for Comments: 2512<br>
+Request for Comments: 2612<br>
 Category: Experimental
 </div>
 <div class="rfc-header-col" style="text-align: right;">
