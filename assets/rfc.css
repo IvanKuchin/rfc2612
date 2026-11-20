@@ -1,0 +1,125 @@
+:root {
+    --bg: #ffffff;
+    --fg: #1a1a1a;
+    --muted: #555555;
+    --border: #d0d7de;
+    --code-bg: #f6f8fa;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #0d1117;
+        --fg: #e6edf3;
+        --muted: #8b949e;
+        --border: #30363d;
+        --code-bg: #161b22;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 2rem 1rem;
+    background-color: var(--bg);
+    color: var(--fg);
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+.rfc-document {
+    max-width: 82ch;
+    margin: 0 auto;
+}
+
+/* Classic RFC Top Metadata Grid */
+.rfc-header-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.rfc-header-col {
+    margin: 0;
+}
+
+.rfc-title {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 1.5rem 0;
+}
+
+.rfc-dedication {
+    border-left: 3px solid var(--border);
+    padding-left: 1rem;
+    color: var(--muted);
+    font-style: italic;
+    margin: 1.25rem 0;
+}
+
+h2 {
+    font-size: 1.05rem;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.25rem;
+}
+
+h3 {
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+p,
+ul,
+ol {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+/* ASCII Diagrams & Code Blocks */
+pre {
+    background-color: var(--code-bg);
+    border: 1px solid var(--border);
+    padding: 1rem;
+    overflow-x: auto;
+    white-space: pre;
+    line-height: 1.3;
+    font-size: 13px;
+}
+
+code {
+    font-family: inherit;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.25rem 0;
+    font-size: 13px;
+}
+
+th,
+td {
+    border: 1px solid var(--border);
+    padding: 0.5rem 0.75rem;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    background-color: var(--code-bg);
+}
+
+hr {
+    border: 0;
+    border-top: 1px dashed var(--border);
+    margin: 2rem 0;
+}

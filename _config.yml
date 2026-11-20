@@ -1,0 +1,7 @@
+title: "RFC 2512: Christmas Night Savings Time (CNST)"
+description: "A Standard for Prompt-Driven Embodied Agents and YoY Lifecycle Management"
+theme: null
+markdown: kramdown
+kramdown:
+  input: GFM
+  smart_quotes: ["apos", "apos", "quot", "quot"]
