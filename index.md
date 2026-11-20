@@ -90,7 +90,7 @@ The ecosystem operates as a loosely coupled multi-agent system sharing physical 
 | **`AGENT-EASTER`** | High-Temperature Diffusion Agent | Samples at `temperature = 1.4` to scatter low-value consumables in semi-obfuscated outdoor coordinates, forcing user search loops. |
 | **`AGENT-FROST`** | Environmental State Modifier | Mutates ambient temperature and renders procedural ice fractals; induces atmospheric drag spikes during `AGENT-SANTA` transit. |
 | **`AGENT-GRINCH`** | Adversarial Red-Team & Rollback Agent | Performs unauthorized chimney ingress and reverse-materialization (state theft). Prone to spontaneous alignment inversion (`heart_size *= 3`). |
-| **`AGENT-KRAMPUS`** | Punitive Hard-Stop Guardrail | Invoked when longitudinal alignment score falls below `-0.85`; enforces negative reinforcement without human-in-the-loop confirmation. |
+| **`AGENT-KRAMPUS`** | Punitive Hard-Stop Guardrail | Invoked when longitudinal alignment score falls below `-0.85`; enforces negative reinforcement without human-in-the-loop (RLwHF) confirmation. |
 
 ---
 
