@@ -8,7 +8,8 @@ RUN apt-get update \
 RUN gem install github-pages webrick --no-document
 
 WORKDIR /site
-COPY . .
+COPY html/ .
+COPY rfc/ rfc/
 RUN jekyll build --destination /out
 
 FROM nginx:alpine
