@@ -69,10 +69,13 @@ jobs:
       #   id: pages
       #   uses: actions/configure-pages@v5
 
+      - name: Copy RFC sources into Jekyll site
+        run: cp -r rfc html/rfc
+
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
-          source: ./
+          source: ./html
           destination: ./_site
 
       # - name: Upload Pages artifact
