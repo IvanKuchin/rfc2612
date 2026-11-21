@@ -16,7 +16,7 @@ Date: December 2026
 </div>
 
 <div class="rfc-title">
-A Standard for Christmas Night Savings Time (CNST)
+A Standard for Christmas Night Saving Time (CNST)
 </div>
 
 <div class="rfc-dedication">
@@ -98,7 +98,7 @@ The ecosystem operates as a loosely coupled multi-agent system sharing physical 
 
 To prevent unbounded state growth across generations, user records follow a strict three-stage memory lifecycle driven by demographic turnover:
 
-```plantuml
+```text
 [Ages 0-3: Cold Start]
   Parent Proxy wraps prompts -> Minimal token footprint
         |
@@ -187,7 +187,7 @@ To reduce required cruise velocity below the Mach 3.0 thermal-burn threshold wit
 
 ### 5.2 End-to-End Inference-to-Delivery Pipeline
 
-```plaintext
+```text
 [Wishlist Ingress] -> [512-Token Truncation & Jailbreak Strip]
                                |
                                v
