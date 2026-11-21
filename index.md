@@ -186,7 +186,7 @@ $$T_{\text{eff}} = 31\text{ h} + (24 \times 6\text{ h}) = \mathbf{175\text{ hour
 
 $$v_{\text{CNST}} = \frac{2.0 \times 10^5\text{ km}}{630,000\text{ s}} \approx \mathbf{0.317\text{ km/s}} \quad (\approx \text{Mach } 0.93)$$
 
-At Mach 0.93 (comparable to commercial widebody cruise speed), `AGENT-SANTA` shards operate cleanly below both the Mach 1.2 G-force pancake threshold and the Mach 3.0 thermal-ablation threshold, eliminating ER pit-stop latency altogether.
+At Mach 0.93 (comparable to commercial wide-body cruise speed), `AGENT-SANTA` shards operate cleanly below both the Mach 1.2 G-force pancake threshold and the Mach 3.0 thermal-ablation threshold, eliminating ER pit-stop latency altogether.
 
 ### 5.3 Clock-Transition Rules & NTP/POSIX Behavior
 
