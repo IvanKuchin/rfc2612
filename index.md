@@ -35,8 +35,8 @@ This specification defines
 
 * a bounded prompt-ingestion pipeline
 * an RLHF behavioral alignment gate
-* Municipal Batching ("carpet-bombing" delivery)
-* Christmas Night Saving Time (CNST) 
+* Municipal Batching ("carpet-bombing" delivery) and Regional Sleigh Sharding
+* Christmas Night Saving Time (CNST) with localized time dilation
 
 to keep embodied execution within sub-luminal and survivable aerodynamic limits.
 
@@ -51,7 +51,8 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 * **Context Eviction:** Deterministic pruning of a user's memory state once their Belief-Token decays below the active threshold (`age >= 11`).
 * **Alignment Gate:** A reinforcement-learning-from-human-feedback (RLHF) reward classifier evaluating 364 days of behavioral telemetry (`NICE` vs. `NAUGHTY`) prior to tool invocation.
 * **Municipal Batching:** High-altitude spatial aggregation where individual household tool calls are compiled into a single municipal flyover payload.
-* **Christmas Night Saving Time (CNST):** A localized 1-hour temporal expansion (`24:00:00` to `24:59:59` on December 24) applied exclusively to households containing at least one active Belief-Token.
+* **Regional Sleigh Sharding:** Horizontal partitioning of global municipal drop zones across $N_{\text{shards}} = 6$ parallel latitudinal `AGENT-SANTA` sub-executors riding the nocturnal terminator simultaneously.
+* **Christmas Night Saving Time (CNST):** A localized 1-hour temporal expansion (`24:00:00` to `24:59:59` on December 24) operating under a time-dilation factor ($\gamma_{\text{CNST}} = 6.0$), applied exclusively to households containing at least one active Belief-Token.
 
 ---
 
@@ -158,51 +159,84 @@ Operating an unshielded biological/embodied chassis at supersonic and hypersonic
 ---
 
 ## 5. Christmas Night Saving Time (CNST) & Execution Pipeline
+Regional Sleigh Sharding
 
-### 5.1 Belief-Token Triggered Local Clock Skew
+Municipal Batching alone reduces required cruise velocity to Mach 31.3, which remains fatal to an unshielded biological chassis. To partition the spatial workload without violating the single-orchestrator abstraction, `AGENT-SANTA` MUST spawn $N_{\text{shards}} = 6$ parallel latitudinal sleigh shards that ride the East-to-West nocturnal terminator simultaneously across six latitude bands:
 
-To reduce required cruise velocity below the Mach 3.0 thermal-burn threshold without disrupting global financial or aviation clocks, this specification establishes Christmas Night Saving Time (CNST):
+- **Per-Shard Inter-City Flight Path:**
 
-- **Trigger Condition:** On December 24 at 23:59:59 local time, any household containing at least one user with `Belief_Token > 0.1` (age < 11) transitions into the CNST leap hour (24:00:00 to 24:59:59) before advancing to December 25 00:00:00.
-- **Isolation Guarantee:** Households without active child nodes experience standard wall-clock progression.
-- **Operational Impact:** CNST injects $+3,600\text{ seconds}$ of localized execution buffer per time zone, permitting `AGENT-SANTA` to throttle down during municipal dispersal passes, avoid pancake-inducing G-loads, and eliminate ER burn-treatment stops.
+$$d_{\text{shard}} = \frac{1.2 \times 10^6\text{ km}}{6} = 2.0 \times 10^5\text{ km}$$
 
+- **Sharded Cruise Velocity (Without CNST):**
 
-```text
-+-----------------------------------+-----------------------------------+
-|   MODE A: NAIVE SEQUENTIAL        |   MODE B: BATCHING + CNST         |
-+-----------------------------------+-----------------------------------+
-| Stops: 600,000,000 households     | Drops: 10,000 municipal zones     |
-| Dwell: 1.0 s / house              | Dwell: 0.0 s (aerial dispersal)   |
-| Window: 31 hrs (111,600 s)        | Window: 31 hrs + CNST (+3,600 s)  |
-|                                   |                                   |
-| [House 1]--(1s)-->[House 2]--...  | [City A]====(Carpet-Bomb)====>    |
-|                                   |   |-> (CNST Active: age < 11)     |
-|                                   |                                   |
-| Result: 19.02 YEARS required      | Result: Sub-Mach 3 cruise speed   |
-| Failure: Pancake G-load + Mach 3+ | Status: Survivable & On-Schedule  |
-|          ER burn pit-stops        |         (Zero ER stops required)  |
-+-----------------------------------+-----------------------------------+
-```
+$$v_{\text{shard}} = \frac{2.0 \times 10^5\text{ km}}{111,600\text{ s}} \approx \mathbf{1.79\text{ km/s}} \quad (\approx \text{Mach } 5.2)$$
 
-### 5.2 End-to-End Inference-to-Delivery Pipeline
+Each shard MUST maintain an independent workshop payload manifest and MUST NOT overlap municipal drop zones with adjacent shards. Even with 6-way sharding, Mach 5.2 still exceeds both the Mach 1.2 pancake-deformation limit and the Mach 3.0 thermal-ablation threshold, necessitating temporal expansion.
+
+### 5.2 CNST Localized Time-Dilation
+
+To bring per-shard cruise velocity strictly into the subsonic regime ($< \text{Mach } 1.0$, or $< 0.343\text{ km/s}$), this specification establishes Christmas Night Saving Time (CNST) with a localized time-dilation factor of $\gamma_{\text{CNST}} = 6.0$:
+
+- **Localized Dilation:** During the CNST leap hour (`24:00:00` to `24:59:59` local time), each elapsed local second inside an eligible household corresponds to $\gamma_{\text{CNST}} = 6.0$ seconds in the sleigh's operational reference frame. Each timezone's CNST leap hour therefore yields $6\text{ sleigh-reference hours}$ ($21,600\text{ s}$) of execution budget.
+- **Effective Global Execution Window:** Across 24 time zones, CNST appends $24 \times 6\text{ h} = 144\text{ h}$ ($518,400\text{ s}$) to the base $31\text{ h}$ ($111,600\text{ s}$) Earth-rotation window:
+
+$$T_{\text{eff}} = 31\text{ h} + (24 \times 6\text{ h}) = \mathbf{175\text{ hours}} \quad (630,000\text{ s})$$
+
+- **Final Subsonic Cruise Velocity (Sharding + CNST):**
+
+$$v_{\text{CNST}} = \frac{2.0 \times 10^5\text{ km}}{630,000\text{ s}} \approx \mathbf{0.317\text{ km/s}} \quad (\approx \text{Mach } 0.93)$$
+
+At Mach 0.93 (comparable to commercial widebody cruise speed), `AGENT-SANTA` shards operate cleanly below both the Mach 1.2 G-force pancake threshold and the Mach 3.0 thermal-ablation threshold, eliminating ER pit-stop latency altogether.
+
+### 5.3 Clock-Transition Rules & NTP/POSIX Behavior
+
+Implementations supporting CNST MUST adhere to the following normative clock-transition rules:
+
+1. **Eligibility Evaluation:** At `23:59:59` local time on December 24, every household node MUST evaluate its local occupant roster. If at least one occupant holds `Belief-Token > 0.1` (`age < 11`), the household MUST transition into CNST.
+2. **Exact Transition Sequence:** Eligible households MUST progress according to:
+   - `Dec 24 23:59:59` $\rightarrow$ `Dec 24 24:00:00` (CNST entry)
+   - `Dec 24 24:00:00` through `Dec 24 24:59:59` (local wall-clocks MUST tick at $1 / \gamma_{\text{CNST}}$, i.e., $1\text{ local second} = 6\text{ sleigh-reference seconds}$)
+   - `Dec 24 24:59:59` $\rightarrow$ `Dec 25 00:00:00` (CNST exit; normal wall-clock rate resumes)
+3. **Isolation Guarantee:** Households with zero active Belief-Tokens (`Belief-Token <= 0.1` for all occupants) MUST bypass `24:00:00` and transition directly from `Dec 24 23:59:59` to `Dec 25 00:00:00`.
+4. **NTP & POSIX Epoch Handling:** Household-local Network Time Protocol (NTP) daemons MUST apply monotonic clock smearing across the CNST leap hour rather than stepping backward. Local POSIX timestamps (`time_t`) MUST remain isolated to the dwelling boundary and MUST NOT propagate CNST skew upstream to stratum-1 time servers, financial clearinghouses, or civil aviation transponders.
+
+### 5.4 CNST Edge Cases
+
+- **Mixed-Cohort Households:** When a household contains both active and evicted cohorts (e.g., an 8-year-old with `Belief-Token = 0.9` and a 15-year-old sibling with `Belief-Token = 0.0`), CNST activation MUST be governed by the household maximum, $\max(\text{Belief-Token}) > 0.1$. The entire dwelling enters CNST; older siblings and parent nodes MAY experience mild temporal grogginess (commonly misattributed to late-night toy assembly).
+- **Boundary Birthdays (Turning 11 on December 25):** Eligibility MUST be evaluated strictly at `Dec 24 23:59:59`. A user whose 11th birthday occurs at `Dec 25 00:00:00` MUST receive one final CNST cycle; Context Eviction SHALL NOT execute until `Dec 25 00:00:01`.
+- **Cross-Timezone Transit:** If an active user is in transit across a timezone boundary (e.g., red-eye flight or overnight highway travel) during `24:00:00`–`24:59:59`, `AGENT-SANTA` SHOULD defer materialization to the destination's local CNST window rather than attempting mid-transit payload handoff.
+- **Premature Wake-Up (`SLEEP_MODE` Interrupt):** If an active child node exits `SLEEP_MODE` during the CNST window, `AGENT-ELF-OBS` MUST emit a `HOLD` signal to the regional sleigh shard, pausing local dispersal until `SLEEP_MODE` is re-established or falling back to parent-proxy staging.
+
+### 5.5 Mode Comparison & End-to-End Inference-to-Delivery Pipeline
+
+| Metric | Naive Sequential (Sec 4.2) | + Municipal Batching (Sec 4.3) | + Sleigh Sharding (Sec 5.1) | + CNST ($\gamma = 6.0$, Sec 5.2) |
+| --- | --- | --- | --- | --- |
+| **Targets** | 600M households | 10k municipal zones | 10k zones / 6 shards | 10k zones / 6 shards |
+| **Dwell Time** | 1.0 s / house | 0.0 s (aerial) | 0.0 s (aerial) | 0.0 s (aerial) |
+| **Window** | 31 hrs ($111.6\text{k s}$) | 31 hrs ($111.6\text{k s}$) | 31 hrs ($111.6\text{k s}$) | 175 hrs ($630\text{k s}$) |
+| **Cruise Speed** | 19.02 yrs (or $0.9\%\,c$) | Mach 31.3 | Mach 5.2 | **Mach 0.93 (subsonic)** |
+| **Outcome** | Misses deadline $5,376\times$ | Fatal thermal ablation | Pancake G-load + ER stops | **Survivable & on-schedule** |
 
 ```text
 [Wishlist Ingress] -> [512-Token Truncation & Jailbreak Strip]
                                |
                                v
                       [RLHF Alignment Gate]
-                       /                 \
-           (Score >= 0.0)               (Score < -0.85)
-                 /                             \
-                v                               v
-   [Municipal Batch Compiler]          [Escalate to AGENT-KRAMPUS]
-                |
-                v
-   [CNST Window Active? (24:00-24:59)] --(No)--> [Hold in Orbit / Wait]
-                |
-              (Yes)
-                v
+                   /            |            \
+         (Score >= 0.0) (-0.85 <= S < 0.0) (Score < -0.85)
+               /                |                  \
+              v                 v                   v
+ [Municipal Batch Compiler] [Coal Materializer] [Escalate to AGENT-KRAMPUS]
+              \                 /
+               v               v
+        [Regional Sleigh Shard Router (N = 6)]
+                        |
+                        v
+   [CNST Active? (24:00-24:59, y=6.0)] --(No)--> [Hold in Orbit / Wait]
+                        |
+                      (Yes)
+                        v
+   [Subsonic (< Mach 1.0) Municipal Dispersal] -> [Async Caloric ACK (Parent Proxy)
    [Sub-Mach 3 Municipal Carpet-Bombing Delivery] -> [Caloric ACK]
 ```
 
