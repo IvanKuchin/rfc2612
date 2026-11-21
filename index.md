@@ -1,4 +1,4 @@
-﻿---
+---
 layout: rfc
 title: "RFC 2612: Christmas Night Saving Time (CNST)"
 ---
