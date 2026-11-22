@@ -1,10 +1,15 @@
 Agentic
 CNST
+DOI
+HTCPCP
+Kasch
 KRAMPUS
 Kuchin
 lifecycle
+Masinter
 mathbf
 misattributed
+NPANA
 NPETF
 rfc
 rightarrow
@@ -12,4 +17,5 @@ RLHF
 RLw
 teamers
 timezone
+Waitzman
 wishlist
