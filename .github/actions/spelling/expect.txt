@@ -1,10 +1,13 @@
 Agentic
+bmod
 CNST
 DOI
 HTCPCP
 Kasch
+Klyne
 KRAMPUS
 Kuchin
+lfloor
 lifecycle
 Masinter
 mathbf
@@ -12,9 +15,12 @@ misattributed
 NPANA
 NPETF
 rfc
+rfloor
 rightarrow
 RLHF
 RLw
+sourced
+subpayload
 teamers
 timezone
 Waitzman
